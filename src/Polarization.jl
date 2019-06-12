@@ -23,7 +23,7 @@ function PolMap(S0,S1,S2,S3,DenNorm,MapName,siz,sampp=2^4)
     # Geometrical stuff
     A = (s0 .+ hypot.(s1, s2))/2 # Semi-major axis
     B = (s0 .- hypot.(s1, s2))/2 # Semi-minor axis
-    PHI = (atan.(s2,s1))./2       # Angle
+    PHI = -(atan.(s2,s1))./2       # Angle
     HD = sign.(s3);           # Handedness
 
     # Size of numerical window in terms of circle size
